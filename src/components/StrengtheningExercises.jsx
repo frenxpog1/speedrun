@@ -1,3 +1,5 @@
+import VideoDemonstration from './VideoDemonstration'
+
 export default function StrengtheningExercises() {
   const exercises = [
     {
@@ -17,7 +19,8 @@ export default function StrengtheningExercises() {
         "Exhale as you push back up to standing",
         "Perform 12 reps × 3 sets, rest 1–2 minutes between sets"
       ],
-      feeling: "A tightening sensation at the front of your thighs (quadriceps)"
+      feeling: "A tightening sensation at the front of your thighs (quadriceps)",
+      videoUrl: "/videos/squats.mp4"
     },
     {
       id: "knee-extension",
@@ -35,7 +38,8 @@ export default function StrengtheningExercises() {
         "Repeat 8 times on the left leg, then switch to right",
         "Rest for 2 minutes between sets"
       ],
-      feeling: "A strengthening sensation in your hamstring muscles"
+      feeling: "A strengthening sensation in your hamstring muscles",
+      videoUrl: "/videos/knee-extension.mp4"
     },
     {
       id: "forward-lunges",
@@ -54,7 +58,8 @@ export default function StrengtheningExercises() {
         "Push off with the left foot to return to starting position",
         "Perform 8 reps × 3 sets, resting 2–3 minutes between sets"
       ],
-      feeling: "A strengthening sensation in your left quadriceps and glutes"
+      feeling: "A strengthening sensation in your left quadriceps and glutes",
+      videoUrl: "/videos/forward-lunges.mp4"
     }
   ]
 
@@ -95,6 +100,11 @@ export default function StrengtheningExercises() {
                   <h4 className="text-lg font-semibold mb-2">What You Should Feel</h4>
                   <p>{exercise.feeling}</p>
                 </div>
+                <VideoDemonstration 
+                  title={exercise.name}
+                  videoUrl={exercise.videoUrl}
+                  instructor="Sasha Guadalquiver"
+                />
               </div>
             </div>
           ))}

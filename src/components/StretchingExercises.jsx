@@ -1,3 +1,5 @@
+import VideoDemonstration from './VideoDemonstration'
+
 export default function StretchingExercises() {
   const exercises = [
     {
@@ -19,7 +21,8 @@ export default function StretchingExercises() {
         "Avoid bending your right knee",
         "Hold the stretch for 30 seconds, repeat 3 sets"
       ],
-      feeling: "A stretch at the back of your right thigh"
+      feeling: "A stretch at the back of your right thigh",
+      videoUrl: "/videos/hamstring-towel-stretch.mp4"
     },
     {
       id: "sit-reach",
@@ -35,7 +38,8 @@ export default function StretchingExercises() {
         "Return to starting position and repeat",
         "Perform for 30 seconds × 3 sets"
       ],
-      feeling: "A stretch in the back of your thighs"
+      feeling: "A stretch in the back of your thighs",
+      videoUrl: "/videos/sit-reach-stretch.mp4"
     },
     {
       id: "standing-hamstring",
@@ -55,7 +59,8 @@ export default function StretchingExercises() {
         "Keep hands lightly on your hips for balance",
         "Hold for 20 seconds, then return slowly and repeat 3 times"
       ],
-      feeling: "A stretch at the back of your left thigh"
+      feeling: "A stretch at the back of your left thigh",
+      videoUrl: "/videos/standing-hamstring-stretch.mp4"
     },
     {
       id: "quad-stretch",
@@ -69,7 +74,8 @@ export default function StretchingExercises() {
         "Make sure your body doesn't tilt or twist",
         "Hold the stretch for 30 seconds, repeat 3 sets"
       ],
-      feeling: "A pulling sensation in the front of the right thigh"
+      feeling: "A pulling sensation in the front of the right thigh",
+      videoUrl: "/videos/quad-stretch.mp4"
     }
   ]
 
@@ -110,6 +116,11 @@ export default function StretchingExercises() {
                   <h4 className="text-lg font-semibold mb-2">What You Should Feel</h4>
                   <p>{exercise.feeling}</p>
                 </div>
+                <VideoDemonstration 
+                  title={exercise.name}
+                  videoUrl={exercise.videoUrl}
+                  instructor="Sasha Guadalquiver"
+                />
               </div>
             </div>
           ))}
