@@ -80,41 +80,40 @@ export default function StretchingExercises() {
   ]
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4">Stretching Exercises</h2>
-        <p className="text-lg text-center mb-8">
-          These exercises are designed to improve flexibility and reduce tightness in your lower extremities.
-          Remember to breathe deeply and never force a stretch beyond your comfort level.
+    <section className="py-12 bg-[var(--background)] min-h-screen">
+      <div className="container mx-auto px-4">
+        <h2 className="section-title">Stretching Exercises</h2>
+        <p className="text-base md:text-lg text-center mb-8 text-[var(--text)]">
+          These exercises are designed to improve flexibility and reduce tightness in your lower extremities. Remember to breathe deeply and never force a stretch beyond your comfort level.
         </p>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           {exercises.map((exercise) => (
-            <div key={exercise.id} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4">{exercise.name}</h3>
-              <div className="space-y-4">
+            <div key={exercise.id} className="exercise-card">
+              <h3 className="text-xl font-bold mb-2 text-[var(--primary)]">{exercise.name}</h3>
+              <div className="space-y-3">
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Purpose</h4>
-                  <p>{exercise.purpose}</p>
+                  <h4 className="font-semibold mb-1 text-[var(--accent)]">Purpose</h4>
+                  <p className="text-sm">{exercise.purpose}</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Equipment Needed</h4>
-                  <ul className="list-disc list-inside">
+                  <h4 className="font-semibold mb-1 text-[var(--accent)]">Equipment Needed</h4>
+                  <ul className="list-disc pl-5 text-sm">
                     {exercise.equipment.map((item, index) => (
                       <li key={index}>{item}</li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Procedure</h4>
-                  <ol className="list-decimal list-inside space-y-2">
+                  <h4 className="font-semibold mb-1 text-[var(--accent)]">Procedure</h4>
+                  <ol className="list-decimal pl-5 space-y-1 text-sm">
                     {exercise.procedure.map((step, index) => (
                       <li key={index}>{step}</li>
                     ))}
                   </ol>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">What You Should Feel</h4>
-                  <p>{exercise.feeling}</p>
+                  <h4 className="font-semibold mb-1 text-[var(--accent)]">What You Should Feel</h4>
+                  <p className="text-sm">{exercise.feeling}</p>
                 </div>
                 <VideoDemonstration 
                   title={exercise.name}
