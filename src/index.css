@@ -3,44 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --primary: #FF69B4; /* Hot Pink */
-  --secondary: #FFB6C1; /* Light Pink */
-  --accent: #FFC0CB; /* Pink */
-  --background: #FFF0F5; /* Lavender Blush */
-  --text: #4A4A4A; /* Dark Gray */
-  --gradient-start: #FF69B4;
-  --gradient-end: #FFB6C1;
+  --primary: #2563eb; /* Blue-600 */
+  --secondary: #64748b; /* Slate-500 */
+  --accent: #38bdf8; /* Sky-400 */
+  --background: #f8fafc; /* Slate-50 */
+  --text: #1e293b; /* Slate-800 */
+  --card: #fff; /* White */
+  --border: #e2e8f0; /* Slate-200 */
 }
 
 @layer base {
   body {
-    @apply bg-[var(--background)] text-[var(--text)];
+    @apply bg-[var(--background)] text-[var(--text)] font-sans;
   }
 }
 
 @layer components {
   .modern-card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden;
+    @apply bg-[var(--card)] rounded-xl shadow-md border border-[var(--border)] transition-all duration-300 overflow-hidden;
   }
 
-  .gradient-button {
-    @apply px-6 py-3 rounded-full text-white font-medium 
-           bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)]
-           hover:opacity-90 transition-all duration-300
-           shadow-md hover:shadow-lg;
+  .primary-button {
+    @apply px-6 py-2 rounded-lg text-white font-medium bg-[var(--primary)] hover:bg-[var(--accent)] transition-colors duration-200 shadow hover:shadow-lg;
   }
 
   .section-title {
-    @apply text-4xl font-bold mb-8 text-center
-           bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)]
-           bg-clip-text text-transparent;
+    @apply text-3xl font-bold mb-6 text-center text-[var(--primary)];
   }
 
   .exercise-card {
-    @apply modern-card p-8 hover:scale-[1.02] transition-transform duration-300;
+    @apply modern-card p-6 hover:scale-[1.01] transition-transform duration-200;
   }
 
   .video-container {
-    @apply rounded-2xl overflow-hidden shadow-lg;
+    @apply rounded-xl overflow-hidden shadow-md;
   }
 } 
