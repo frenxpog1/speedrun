@@ -12,7 +12,7 @@ export default function Navbar({ setPage }) {
   return (
     <nav className="bg-[var(--background-glass)] backdrop-blur-md shadow border-b border-[var(--border)] sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="text-2xl font-extrabold bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--accent2)] bg-clip-text text-transparent tracking-tight select-none">
+        <h1 className="text-2xl font-extrabold text-[#B76E79] tracking-tight select-none">
           SHARTHEA CLINICS
         </h1>
         {/* Desktop nav */}

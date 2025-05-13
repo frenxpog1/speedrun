@@ -82,7 +82,7 @@ export default function StretchingExercises() {
   return (
     <section className="py-12 bg-[var(--background)] min-h-screen">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Stretching Exercises</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#B76E79] text-center">Stretching Exercises</h2>
         <p className="text-base md:text-lg text-center mb-8 text-[var(--text)]">
           These exercises are designed to improve flexibility and reduce tightness in your lower extremities. Remember to breathe deeply and never force a stretch beyond your comfort level.
         </p>

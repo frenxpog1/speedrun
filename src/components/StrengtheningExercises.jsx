@@ -66,7 +66,7 @@ export default function StrengtheningExercises() {
   return (
     <section className="py-12 bg-[var(--background)] min-h-screen">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Strengthening Exercises</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#B76E79] text-center">Strengthening Exercises</h2>
         <p className="text-base md:text-lg text-center mb-8 text-[var(--text)]">
           These exercises are designed to build strength in your lower extremities. Remember to maintain proper form and stop if you experience any pain.
         </p>
