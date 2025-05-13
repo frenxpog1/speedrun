@@ -1,6 +1,11 @@
 export default function About() {
   return (
     <div className="min-h-screen bg-[var(--background)]">
+      {/* Disclaimer - styled as plain text above all content */}
+      <p className="italic font-bold text-[#C0392B] text-lg font-serif text-center mt-4 mb-2">
+        Disclaimer: This HEP is designed for educational and simulated patient purposes only.<br />
+        Please consult a licensed physical therapist for real-life diagnosis, evaluation, or treatment.
+      </p>
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center justify-center py-16 px-4 text-center">
         <h1 className="text-5xl md:text-6xl font-extrabold text-black mb-4 drop-shadow-lg">About Sharthea Clinics</h1>

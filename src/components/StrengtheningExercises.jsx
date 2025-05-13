@@ -99,11 +99,6 @@ export default function StrengtheningExercises() {
                   <h4 className="font-semibold mb-1 text-[var(--accent)]">What You Should Feel</h4>
                   <p className="text-sm">{exercise.feeling}</p>
                 </div>
-                <VideoDemonstration 
-                  title={exercise.name}
-                  videoUrl={exercise.videoUrl}
-                  instructor="Sasha Guadalquiver"
-                />
               </div>
             </div>
           ))}

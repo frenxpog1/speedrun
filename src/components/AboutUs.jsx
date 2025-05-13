@@ -15,10 +15,8 @@ export default function AboutUs() {
           </ul>
         </div>
         <div className="bg-gray-50 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-          <h3 className="text-xl font-semibold mb-4">Disclaimer</h3>
-          <p className="text-sm text-gray-600">
-            This HEP is designed for educational and simulated patient purposes only. 
-            Please consult a licensed physical therapist for real-life diagnosis, evaluation, or treatment.
+          <p className="italic font-bold text-[#E53935] text-lg font-serif text-center">
+            Disclaimer: This HEP is designed for educational and simulated patient purposes only. Please consult a licensed physical therapist for real-life diagnosis, evaluation, or treatment.
           </p>
         </div>
       </div>
