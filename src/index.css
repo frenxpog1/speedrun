@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: #2563eb; /* Blue-600 */
-  --secondary: #64748b; /* Slate-500 */
-  --accent: #38bdf8; /* Sky-400 */
-  --background: #f8fafc; /* Slate-50 */
-  --text: #1e293b; /* Slate-800 */
+  --primary: #D72660; /* Fuchsia */
+  --accent: #6C63FF; /* Indigo */
+  --accent2: #43E6B0; /* Mint */
+  --accent3: #F9F871; /* Lemon */
+  --background: #FFF0F6; /* Blush */
+  --background-glass: rgba(255, 240, 246, 0.7);
+  --text: #22223B; /* Deep blue-gray */
   --card: #fff; /* White */
   --border: #e2e8f0; /* Slate-200 */
 }
@@ -20,22 +22,22 @@
 
 @layer components {
   .modern-card {
-    @apply bg-[var(--card)] rounded-xl shadow-md border border-[var(--border)] transition-all duration-300 overflow-hidden;
+    @apply bg-[var(--card)] rounded-2xl shadow-xl border border-[var(--border)] transition-all duration-300 overflow-hidden backdrop-blur-md bg-opacity-80;
   }
 
   .primary-button {
-    @apply px-6 py-2 rounded-lg text-white font-medium bg-[var(--primary)] hover:bg-[var(--accent)] transition-colors duration-200 shadow hover:shadow-lg;
+    @apply px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--accent2)] hover:from-[var(--accent)] hover:to-[var(--primary)] transition-all duration-200 shadow-lg hover:scale-105;
   }
 
   .section-title {
-    @apply text-3xl font-bold mb-6 text-center text-[var(--primary)];
+    @apply text-4xl font-extrabold mb-8 text-center bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--accent2)] bg-clip-text text-transparent drop-shadow-lg;
   }
 
   .exercise-card {
-    @apply modern-card p-6 hover:scale-[1.01] transition-transform duration-200;
+    @apply modern-card p-8 hover:scale-[1.03] transition-transform duration-200 border-0 shadow-2xl;
   }
 
   .video-container {
-    @apply rounded-xl overflow-hidden shadow-md;
+    @apply rounded-2xl overflow-hidden shadow-lg border-0;
   }
 } 
